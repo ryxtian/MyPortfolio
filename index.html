@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+      <nav>
+          <div class="logo">MyPortfolio</div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+          <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+      </nav>
+    </header>
+    <main>
+         <section id="about">
+          <div class="about-container">
+            <div class="about-text-block">
+  <h1 id="animated-name"></h1>
+
+
+<p class="about-text">
+  I am a fresh graduate with a Bachelor of Science in Information Systems. I have a strong passion for technology and system development, and I'm proficient in C# programming language. I specialize in building modern, responsive web applications using ASP.NET Core MVC, and I continuously strive to improve my skills in front-end and back-end development.
+</p>
+
+            </div>
+
+        <div class="image-oval">
+    <img class="prof"src="profile.jpg" alt="">
+        </div>
+          </div>
+
+
+</section>
+
+   <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div>
+          <h3 class="project-title">Capstone Project</h3>
+          <p class="project-desc">Information Management System for Urban Vet Animal Clinic: Enhancing Patient Care and Clinic Operations
+</p>
+        </div>
+
+      </div>
+      <div class="project-card">
+        <div>
+          <h3 class="project-title">School Project</h3>
+          <p class="project-desc">Customizable Announcement Board</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+       <div class="skill-item"><i class="fab fa-html5" style="margin-right: 8px;"></i> HTML5</div>
+         <div class="skill-item"><i class="fab fa-css3-alt" style="margin-right: 8px;"></i>CSS 3</div>
+          <div class="skill-item"><i class="fab fa-js" style="margin-right: 8px;"></i>JavaScript</div>
+          <div class="skill-item"><i class="fas fa-database" style="margin-right: 8px;"></i>MS SQL Server</div>
+                    <div class="skill-item"><i class="fab fa-github" style="margin-right: 8px;"></i>GitHub</div>
+                    <div class="skill-item">
+  <i class="fas fa-project-diagram" style="margin-right: 8px;"></i>Entity Framework
+</div>
+
+           <div class="skill-item"><i class="fab fa-bootstrap" style="margin-right: 8px;"></i>BootStrap</div>
+           <div class="skill-item"><i class="fab fa-c#" style="margin-right: 8px;"></i>C# Programming Language</div>
+<div class="skill-item">
+  <i class="fas fa-code" style="margin-right: 8px;"></i> ASP.NET Core MVC
+</div>
+             <div class="skill-item"><i class="fab fa-php" style="margin-right: 8px;"></i>PHP Programming Language</div>
+<div class="skill-item">
+   <i class="fas fa-code" style="margin-right: 8px;"></i> 
+  CodeIgniter 3
+</div>
+    </div>
+  </section>
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="achievements-container">
+    <div class="achievements-item">
+      <img src="programmeroftheyear.jpg" alt="Achievement 1">
+      <h3>Programmer of the year</h3>
+<p>Immaculate Conception I-College of Arts and Technology</p>
+<p>Batch 2024-2025</p>
+    </div>
+    <div class="achievements-item">
+      <img src="bestincapstoneproject.jpg" alt="Achievement 2">
+      <h3>Best in Capstone Project</h3>
+<p>Immaculate Conception I-College of Arts and Technology</p>
+<p>Batch 2024-2025</p>
+    </div>
+  </div>
+</section>
+
+  <section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <label for="email">E-mail</label>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <label for="message">Message</label>
+    <textarea name="message" placeholder="Your Message" required></textarea><br>
+    <button type="submit">Send Message</button>
+    <p id="formMessage"></p>
+  </form>
+</section>
+
+<section class="social-media">
+  <a class="social-media-items" href="https://www.facebook.com/ryanchristian.fajardo16"><i class="fab fa-facebook"></i></a>
+  <a class="social-media-items" href="https://www.instagram.com/krishanryx_/"><i class="fab fa-instagram"></i></a>
+  <a class="social-media-items" href="https://github.com/ryxtian"><i class="fab fa-github"></i></a>
+</section>
+
+    </main>
+
+    <footer>
+  &copy; 2025 Ryan Christian Fajardo. All rights reserved.
+</footer>
+
+<script>
+  // Responsive navigation toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  // Close nav when link clicked (mobile)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(navLinks.classList.contains('active')){
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+
+   const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formMessage.style.color = '#00d8ff';
+    formMessage.textContent = 'Sending your message...';
+
+     if (!contactForm.checkValidity()) {
+      formMessage.style.color = '#ff4b5c';
+      formMessage.textContent = 'Please fill out all fields correctly.';
+      return;
+    }
+
+
+      setTimeout(() => {
+      formMessage.style.color = '#00ffea';
+      formMessage.textContent = 'Thank you! Your message has been sent.';
+      contactForm.reset();
+    }, 2000);
+  });
+</script>
+<script>
+const text = "Hello, I'm Ryan Christian Fajardo";
+const container = document.getElementById("animated-name");
+
+text.split('').forEach((char, index) => {
+  const span = document.createElement('span');
+  span.textContent = char === ' ' ? '\u00A0' : char;
+  span.classList.add('fade-in');
+  span.style.animationDelay = `${index * 0.05}s`;
+  container.appendChild(span);
+});
+
+</script>
+
+</body>
+</html>
